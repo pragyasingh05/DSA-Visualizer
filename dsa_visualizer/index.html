@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Visualizer - Pastel Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section id="visualizer" class="visualizer-section">
+            <div class="pastel-card">
+                <h1 class="pastel-title">DSA Visualizer</h1>
+                <p class="pastel-subtitle">A cozy space to understand algorithms gently.</p>
+
+                <div class="vis-controls">
+                    <div class="control-group">
+                        <select id="algo-select" class="pastel-select">
+                            <option value="bubble">Bubble Sort</option>
+                            <option value="selection">Selection Sort</option>
+                            <option value="insertion">Insertion Sort</option>
+                            <option value="merge">Merge Sort</option>
+                            <option value="quick">Quick Sort</option>
+                            <option value="linear">Linear Search</option>
+                            <option value="binary">Binary Search</option>
+                        </select>
+                        <select id="speed-select" class="pastel-select">
+                            <option value="slow">Slow</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="fast">Fast</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <input type="text" id="custom-array" class="pastel-input"
+                            placeholder="Custom array (e.g. 5,10,15)">
+                        <input type="number" id="search-target" class="pastel-input hide" placeholder="Search target">
+                    </div>
+                    <div class="button-group">
+                        <button id="generate-btn" class="pastel-btn btn-secondary">Mix Array</button>
+                        <button id="start-btn" class="pastel-btn btn-primary">Start</button>
+                        <button id="pause-btn" class="pastel-btn btn-warning">Pause</button>
+                        <button id="reset-btn" class="pastel-btn btn-danger">Reset</button>
+                    </div>
+                </div>
+
+                <div class="vis-canvas" id="vis-canvas">
+                    <!-- Bars will be inserted here by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
